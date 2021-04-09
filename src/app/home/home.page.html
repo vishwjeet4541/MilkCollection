@@ -1,0 +1,58 @@
+
+  <ion-toolbar>
+    
+      <a style="  font: icon;
+      color: #234e6b;
+      font-family: fantasy;; font-size: 22px;">MILK</a>    <a style=" font-family: inherit; color: #198BA3; font: icon; font-size: 22px;">    COLLECTION </a>
+  
+  </ion-toolbar >
+
+ 
+<ion-content>
+  
+  <div>
+    <ion-slides pager="true" [options]="slideOpts" >
+      <ion-slide   *ngFor="let i of img">
+        <img style="width: -webkit-fill-available; margin-top: 20px;border-radius: 22px;" [src]="i.imagepath">
+      </ion-slide>
+     </ion-slides>
+
+     </div>
+     <ion-card    *ngFor=" let data of   itemListData "  (click)="Savedata(data)" >
+
+
+
+      <div class="row">
+        <div class="column left" >
+          <div style="margin-top: 30px;
+          margin-left: 8px;
+          text-align: center;
+          color: #212529;
+          background: #2d2d2d;
+          padding: 11px;
+          display: block;
+          background-color:  #0AB8AC;
+          border-radius: 176px;">{{data.SrNo}}</div>
+          <p></p>
+        </div>
+        <div class="column right"   style="margin-top: 19px;">
+
+          <div  style="    width: -webkit-fill-available;" ><b  style="font-family: auto;
+            color: #555555;">Name-</b><b style="font-family: auto;
+            color: #000000; ">   {{data.FName}} {{data.MName}} {{data.LName}}</b></div>
+          <div style="display: inline-flex; width: -webkit-fill-available;">     <div><b  style="font-family: auto;
+            color: #555555;"> Village-</b><b style="color: #000000; font-family: auto;">{{data.VillageName}}</b></div>  
+          <div style="padding-left: 11px;"> <b  style="font-family: auto;
+            color: #555555;">     Route-</b><b  style="color: #000000; font-family: auto;">{{data.RouteName}}</b></div> </div>
+       
+        </div>
+      </div>
+
+  
+    </ion-card>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+ 

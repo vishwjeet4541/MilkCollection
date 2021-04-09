@@ -1,0 +1,7 @@
+{
+  "name": "devdacticSocket",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,22 @@
+img{
+  
+  --border-radius: 13px;
+}
+ion-card {
+  border-right: 13px solid rgb(255, 0, 0)}
+  ion-card:nth-child(odd) { border-right: 13px solid  rgb(78, 145, 16) }
+  ion-card:nth-child(3n+1) { border-right: 13px solid rgb(0, 103, 238) }
+ 
+      .column {
+        float: left;
+        padding: 10px;
+      }
+      
+      .left {
+        width: 20%;
+      }
+      
+      .right {
+        display: grid;
+        width: 80%;
+      }
